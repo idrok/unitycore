@@ -129,7 +129,7 @@ public class UnityCore_Physical : MonoBehaviour {
 	}
 
     //Physical 物理属性和辅助方法
-    private void Start()
+    private void Start_Physical()
     {
         //图层蒙版常量可选择所有图层
         //Physics.AllLayers;
@@ -218,5 +218,178 @@ public class UnityCore_Physical : MonoBehaviour {
         //Physics.SphereCastNonAlloc(...)
 
         //Physics.SyncTransforms()
+    }
+
+    //Charactor Controller
+    private void Start_CharactorController()
+    {
+        CharacterController cc = GetComponent<CharacterController>();
+
+        //获取cc上面的刚体
+        //cc.attachedRigidbody
+
+        //碰撞器在世界空间中的边界体积
+        //cc.bounds
+
+        //自身的中心点
+        //cc.center
+
+        //离碰撞器最近的一个点
+        //cc.ClosestPoint(v)
+
+        //离碰撞器边界最近的一个点
+        //cc.ClosestPointOnBounds(v)
+
+        //角色和当前环境哪些部分将进行交互
+        //cc.collisionFlags
+
+        //碰撞器偏移
+        //cc.contactOffset
+
+        //其他刚体是否可以检测到cc
+        //cc.detectCollisions
+
+        //是否可以发生碰撞
+        //cc.enabled
+
+        //是否允许重叠恢复
+        //cc.enableOverlapRecovery
+
+        //cc.height
+        //cc.isGrounded
+        //cc.isTrigger
+
+        //物理材质球，地面的阻力，泥塘坑洼地
+        //cc.material
+
+        //最小移动距离
+        //cc.minMoveDistance
+
+        //cc.Move(v)
+        //cc.radius
+
+        //cc自己发射线检测
+        //cc.Raycast(r,h,v)
+
+        //cc.sharedMaterial
+        //cc.SimpleMove(v)
+        //cc.skinWidth
+        //cc.slopeLimit
+        //cc.stepOffset
+        //cc.velocity
+    }
+
+    //Cloth 红旗拟真效果
+    private void Start_Cloth()
+    {
+        Cloth c = GetComponent<Cloth>();
+
+        //布料弯曲僵硬度
+        //c.bendingStiffness
+
+        //布料碰撞数组
+        //c.capsuleColliders
+
+        //清除位置改变对布料的影响
+        //c.ClearTransformMotion();
+
+        //每秒迭代频率
+        //c.clothSolverFrequency
+
+        //蒙皮对布料影响系数
+        //c.coefficients
+
+        //粒子碰撞对质量的影响
+        //c.collisionMassScale
+
+        //阻尼布料运动
+        //c.damping
+        
+        //允许连续的碰撞使的碰撞稳定
+        //c.enableContinuousCollision
+
+        //给布料施加一个外部常量力度
+        //c.externalAcceleration
+
+        //布料碰到角色时的摩擦力
+        //c.friction
+
+        //布料的所有法线
+        //c.normals
+
+        //随机给布料一个速度
+        //c.randomAcceleration
+
+        //给布料一个过渡效果
+        //c.SetEnabledFading(e,t)
+
+        //c.sleepThreshold
+
+        //c.sphereColliders
+
+        //布料拉伸僵硬度
+        //c.stretchingStiffness
+
+        //重力对布料的影响
+        //c.useGravity
+
+        //使用虚拟粒子使得碰撞稳定
+        //c.useVirtualParticles
+
+        //布料顶点个数
+        //c.vertices
+
+        //角色运动对布料影响系数
+        //c.worldAccelerationScale
+        //c.worldVelocityScale
+    }
+
+    //Joint 鞭尸效果
+    private void Start_Joint()
+    {
+        CharacterJoint cj = GetComponent<CharacterJoint>();
+        
+        //如果是外力致使关节运动的中心的
+        //cj.anchor
+       
+        //是否自动计算关节中心的
+        //cj.autoConfigureConnectedAnchor
+
+        //外力运动的方向轴
+        //cj.axis
+
+        //使得关节破碎的力度
+        //cj.breakForce
+        //cj.breakTorque
+
+        //相对中心点
+        //cj.connectedAnchor
+        //cj.connectedBody
+
+        //反作用力系数
+        //cj.connectedMassScale
+
+        //cj.currentForce
+        //cj.currentTorque
+        //cj.enableCollision
+
+        //是否允许预处理
+        //cj.enablePreprocessing
+        //cj.enableProjection ?
+
+        //高度扭矩限制
+        //cj.highTwistLimit
+        //cj.lowTwistLimit
+
+        //cj.massScale ?
+
+        //cj.projectionAngle ?
+        //cj.projectionDistance ?
+
+        //cj.swing1Limit
+        //cj.swing2Limit
+        //cj.swingAxis
+        //cj.swingLimitSpring
+        //cj.twistLimitSpring
     }
 }
